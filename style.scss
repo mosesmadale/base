@@ -1,0 +1,115 @@
+@font-face {
+    font-family: alphabits;
+    src: url('./assets/fonts/AlphabitsSquared.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas, monospace;
+    font-weight: 900;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.app-title {
+    font-family: alphabits;
+    font-size: 5em;
+    padding: 1em;
+    color: #444;
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    input {
+        background-color: #ccc;
+        border: none;
+        padding: 1em;
+        font-size: 1.3em;
+        border-radius: 10px 0 0 10px;
+    }
+    input:focus {
+        outline: none;
+        background-color: rgb(221, 221, 221);
+    }
+    .submit-button {
+        height: 100%;
+        padding: 1.5em 2em;
+        background-color: rgb(167, 167, 167);
+        border-radius: 0 10px 10px 0;
+        cursor: pointer;
+        position: relative;
+        svg {
+            fill: #333;
+            height: 100%;
+            transition: all .5s ease;
+        }
+        .drop-down {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            padding: 1em;
+            display: none;
+            flex-direction: column;
+            gap: 1em;
+            z-index: 99;
+            box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.11);
+            span {
+                padding: 1em 3em;
+                transition: all .5s ease;
+            }
+            span:hover {
+                background-color: #ccc;
+            }
+            span:active {
+                background-color: rgb(0, 0, 65);
+                color: white;
+            }
+        }
+    }
+    .submit-button:hover {
+        background-color: rgb(71, 71, 71);
+        svg {
+            fill: #fff;
+            transform: rotate(90deg);
+        }
+        .drop-down {
+            display: flex;
+        }
+    }
+}
+
+.outputs-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    >div {
+        width: 50%;
+        display: flex;
+        gap: 1em;
+        padding: 2em;
+        background-color: rgb(224, 224, 224);
+        border-radius: 10px;
+        align-items: center;
+        label {
+            color: rgb(0, 0, 65);
+            font-size: 1.3em;
+        }
+        label:after {
+            content: ': '
+        }
+    }
+}

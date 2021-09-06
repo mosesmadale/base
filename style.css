@@ -1,0 +1,162 @@
+@font-face {
+  font-family: alphabits;
+  src: url("./assets/fonts/AlphabitsSquared.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: consolas, monospace;
+  font-weight: 900;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2em;
+}
+
+.app-title {
+  font-family: alphabits;
+  font-size: 5em;
+  padding: 1em;
+  color: #444;
+}
+
+.input-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.input-container input {
+  background-color: #ccc;
+  border: none;
+  padding: 1em;
+  font-size: 1.3em;
+  border-radius: 10px 0 0 10px;
+}
+
+.input-container input:focus {
+  outline: none;
+  background-color: #dddddd;
+}
+
+.input-container .submit-button {
+  height: 100%;
+  padding: 1.5em 2em;
+  background-color: #a7a7a7;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.input-container .submit-button svg {
+  fill: #333;
+  height: 100%;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.input-container .submit-button .drop-down {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  padding: 1em;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+  z-index: 99;
+  -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.11);
+          box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.11);
+}
+
+.input-container .submit-button .drop-down span {
+  padding: 1em 3em;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.input-container .submit-button .drop-down span:hover {
+  background-color: #ccc;
+}
+
+.input-container .submit-button .drop-down span:active {
+  background-color: #000041;
+  color: white;
+}
+
+.input-container .submit-button:hover {
+  background-color: #474747;
+}
+
+.input-container .submit-button:hover svg {
+  fill: #fff;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.input-container .submit-button:hover .drop-down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.outputs-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1em;
+}
+
+.outputs-container > div {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  padding: 2em;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.outputs-container > div label {
+  color: #000041;
+  font-size: 1.3em;
+}
+
+.outputs-container > div label:after {
+  content: ': ';
+}
+/*# sourceMappingURL=style.css.map */
